@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .hero {
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('../static/images/Illustrations/Kedarnath.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+<!--        aspect-ratio: 3 / 1;-->
+        height: auto;
+        top: 0px;
+        bottom: 0px;
+        color: white;
+    }
+
+</style>
+<body>
+    <div class="col hero">
+        <h1 style="text-align: center; padding:8% 0% 0% 0%;">SHWETABH SUMAN</h1>
+        <h5 style="text-align: center; padding: 3% 20% 8% 20%; line-height: 2rem; opacity:0.8; font-family: 'Tahoma'; color:white;">
+            Shwetabh is a Concept and Illustration artist with experience in Animation movie concepts, book illustrations, cover and other illustrations.
+            He likes to capture mood in his artworks and loves to work on fantasy projects.<br>Let's have a look at his creation.
+        </h5>
+    </div>
+
+    <div>
+        <h1 style="text-align:center; padding: 3% 0% 3% 0%;">Transformation</h1>
+    </div>
+    <div>
+        <img src="../static/images/Transformation/wirestock-character.jpg" width="100%">
+        <img src="../static/images/Transformation/1_2.jpg" width="100%">
+        <img src="../static/images/Transformation/3_4.jpg" width="100%">
+        <img src="../static/images/Transformation/5.jpg" width="100%">
+    </div>    <div>
+        <h1 style="text-align:center; padding: 3% 0% 3% 0%;">Illustrations</h1>
+    </div>
+<!--    <div>-->
+<!--        <img src="../static/images/Illustrations/animation_bg.jpg" width="100%" style="padding: 0% 10% 1% 10%;">-->
+<!--        <img src="../static/images/Illustrations/Kamakhya.jpg" width="100%" style="padding: 1% 25%;">-->
+<!--        <img src="../static/images/Illustrations/Kedarnath.jpg" width="100%" style="padding: 1% 0%;">-->
+<!--        <img src="../static/images/Illustrations/batuk_bhairav.jpg" width="100%" style="padding: 1% 30%;">-->
+<!--        <img src="../static/images/Illustrations/bhairav.jpg" width="100%" style="padding: 1% 20%;">-->
+<!--        <img src="../static/images/Illustrations/bipin.jpg" width="100%" style="padding: 1% 35%;">-->
+<!--        <img src="../static/images/Illustrations/dead_painting_pain.jpg" width="100%" style="padding: 1% 25%;">-->
+<!--        <img src="../static/images/Illustrations/Hierarchy.jpg" width="100%" style="padding: 1% 20%;">-->
+<!--        <img src="../static/images/Illustrations/puzzled.jpg" width="100%" style="padding: 1% 28%;">-->
+<!--        <img src="../static/images/Illustrations/stung.jpg" width="100%" style="padding: 1% 28%;">-->
+<!--        <img src="../static/images/Illustrations/spoa.jpg" width="100%" style="padding: 1% 0%;">-->
+<!--    </div>-->
+
+    {% for img in portraits %}
+    <div>
+        <img style="display:block; margin-left:auto; margin-right:auto; padding: 1% 0% 0% 0%;" src={{img}} height="920px">
+    </div>
+    {% endfor %}
+    {% for i in landscapes %}
+    <div>
+        <img style="display:block; margin-left:auto; margin-right:auto; padding: 1% 0% 0% 0%;" src={{i}} width="100%">
+    </div>
+    {% endfor %}
+</body>
+
+
+{% endblock %}
