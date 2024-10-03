@@ -10,6 +10,7 @@ main = Blueprint('main', __name__, static_folder='static', template_folder='temp
 def home():
     portraits = []
     landscapes = []
+    all_images = []
 
     path = 'static/images/Illustrations/'
     details = o.image_details(path)
@@ -19,7 +20,14 @@ def home():
             portraits.append(d[0])
         else:
             landscapes.append(d[0])
+
+    for i in portraits:
+        all_images.append(i)
+
+    for j in landscapes:
+        all_images.append(j)
+
     # details.sort()
     # print(details)
 
-    return render_template('index.html', portraits=portraits, landscapes=landscapes)
+    return render_template('index.html', images=all_images)
