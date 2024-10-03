@@ -13,12 +13,12 @@ def home():
 
     path = 'static/images/Illustrations/'
     details = o.image_details(path)
-    # for d in details:
-    #     orientation = d[3]
-    #     if orientation == 'portrait':
-    #         portraits.append(d[0])
-    #     else:
-    #         landscapes.append(d[0])
+    for d in details:
+        orientation = d[3]
+        if orientation == 'portrait':
+            portraits.append(d[0])
+        else:
+            landscapes.append(d[0])
     # details.sort()
     # print(details)
 

@@ -14,6 +14,11 @@
         color: white;
     }
 
+<!--    .landscape {-->
+<!--        width: 100%;-->
+<!--        max-width: 1880px;-->
+<!--    }-->
+
 </style>
     <div class="col hero">
         <h1 style="text-align: center; padding:8% 0% 0% 0%;">SHWETABH SUMAN</h1>
@@ -48,22 +53,21 @@
 <!--        <img src="../static/images/Illustrations/spoa.jpg" width="100%" style="padding: 1% 0%;">-->
 <!--    </div>-->
 
-    {% for img in portraits %}
     <div>
-        <img style="display:block; margin-left:auto; margin-right:auto; padding: 1% 0% 0% 0%;" src={{img}} height="920px">
+        {% for img in portraits %}
+            <div class="col-12">
+                <img style="display:block; margin:auto; max-height:800px; padding:1% 0%;" src={{img}} class="img-fluid" alt="Responsive image">
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-    {% for i in landscapes %}
 
-<div class="container">
-    <div class="row">
-    =======
-        <div class="col-sm">
-            <img src={{i}}" style="max-width: 100%; width: 1920px;">
-    <!--            style="display:block; margin-left:auto; margin-right:auto; padding: 1% 0% 0% 0%;"-->
+    <div>
+        {% for i in landscapes %}
+        <div class="col-12">
+            <img style="display:block; margin:auto; width:100%; padding:1% 0%;" src={{i}} class="img-fluid" alt="Responsive image">
         </div>
+        {% endfor %}
     </div>
-</div>
-    {% endfor %}
+
 
 {% endblock %}
