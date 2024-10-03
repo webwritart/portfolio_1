@@ -64,3 +64,4 @@ def image_details(path):
     return details
 
 # compress_by_size()
+print_new_dimension()

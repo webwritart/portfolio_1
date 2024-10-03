@@ -8,24 +8,28 @@ main = Blueprint('main', __name__, static_folder='static', template_folder='temp
 
 @main.route('/')
 def home():
-    portraits = []
-    landscapes = []
+    # portraits = []
+    # landscapes = []
     all_images = []
 
     path = 'static/images/Illustrations/'
-    details = o.image_details(path)
-    for d in details:
-        orientation = d[3]
-        if orientation == 'portrait':
-            portraits.append(d[0])
-        else:
-            landscapes.append(d[0])
-
-    for i in portraits:
-        all_images.append(i)
-
-    for j in landscapes:
-        all_images.append(j)
+    for f in os.listdir(path):
+        full_path = path + f
+        all_images.append(full_path)
+    print(all_images)
+    # details = o.image_details(path)
+    # for d in details:
+    #     orientation = d[3]
+    #     if orientation == 'portrait':
+    #         portraits.append(d[0])
+    #     else:
+    #         landscapes.append(d[0])
+    #
+    # for i in portraits:
+    #     all_images.append(i)
+    #
+    # for j in landscapes:
+    #     all_images.append(j)
 
     # details.sort()
     # print(details)
