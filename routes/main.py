@@ -16,7 +16,6 @@ def home():
     for f in os.listdir(path):
         full_path = path + f
         all_images.append(full_path)
-    print(all_images)
     # details = o.image_details(path)
     # for d in details:
     #     orientation = d[3]
